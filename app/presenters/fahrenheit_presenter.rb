@@ -1,2 +1,0 @@
-class FahrenheitPresenter < TemperaturePresenter
-end

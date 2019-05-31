@@ -1,8 +1,6 @@
 class DashboardController < ApplicationController
   def index
-    weather_service = WeatherService.new('Sao Paulo,BR')
-    @weather = weather_service.request_weather
-    @fahrenheit = FahrenheitPresenter.new(@weather)
-    @celsius = CelsiusPresenter.new(@weather)
+    weather_service = WeatherService.new('Sao Paulo,BR').request_weather
+    @weather = TemperaturePresenter.new(weather_service)
   end
 end
