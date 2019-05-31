@@ -1,0 +1,2 @@
+class FahrenheitPresenter < TemperaturePresenter
+end

@@ -1,28 +1,56 @@
 <h1>Weather for <%= @weather.city %></h1>
 
-<h2><%= @weather.temperature %>&ordm;F</h2>
+<h2><%= @fahrenheit.temperature %>&ordm;F</h2>
 
 <table>
   <tbody>
     <tr>
       <td>Pressure</td>
-      <td><%= @weather.pressure %>hpa</td>
+      <td><%= @fahrenheit.pressure %>hpa</td>
     </tr>
     <tr>
       <td>Humidity</td>
-      <td><%= @weather.humidity %>%</td>
+      <td><%= @fahrenheit.humidity %>%</td>
     </tr>
     <tr>
       <td>Min Temperature</td>
-      <td><%= @weather.min_temperature %>&ordm;F</td>
+      <td><%= @fahrenheit.min_temperature %>&ordm;F</td>
     </tr>
     <tr>
       <td>Max Temperature</td>
-      <td><%= @weather.max_temperature %>&ordm;F</td>
+      <td><%= @fahrenheit.max_temperature %>&ordm;F</td>
     </tr>
     <tr>
       <td>Wind Speed</td>
-      <td><%= @weather.wind_speed %>mi/h</td>
+      <td><%= @fahrenheit.wind_speed %>mi/h</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2><%= @celsius.temperature %>&ordm; C</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Pressure</td>
+      <td><%= @celsius.pressure %>hpa</td>
+    </tr>
+    <tr>
+      <td>Humidity</td>
+      <td><%= @celsius.humidity %>%</td>
+    </tr>
+    <tr>
+      <td>Min Temperature</td>
+      <td><%= @celsius.min_temperature %>&ordm;C</td>
+    </tr>
+    <tr>
+      <td>Max Temperature</td>
+      <td><%= @celsius.max_temperature %>&ordm;C</td>
+    </tr>
+    <tr>
+      <td>Wind Speed</td>
+      <td><%= @celsius.wind_speed %>mi/h</td>
     </tr>
   </tbody>
 </table>
