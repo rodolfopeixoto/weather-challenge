@@ -41,4 +41,6 @@ group :test do
   gem 'simplecov', require: false
   gem 'vcr'
   gem 'webmock', '3.0.1'
+  gem 'shoulda-matchers'
+  gem 'rails-controller-testing'
 end
