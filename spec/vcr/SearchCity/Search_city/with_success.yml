@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://127.0.0.1:40401/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.5.5/2019-03-15)
+      Date:
+      - Fri, 31 May 2019 13:13:09 GMT
+      Content-Length:
+      - '14'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '47233043225000'
+    http_version: 
+  recorded_at: Fri, 31 May 2019 13:13:09 GMT
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=3af12266e2913e9347cee2db36b37fe3&q=S%C3%A3o%20Paulo,BR&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Fri, 31 May 2019 13:13:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '462'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?APPID=3af12266e2913e9347cee2db36b37fe3&q=s%c3%a3o+paulo%2cbr&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb29yZCI6eyJsb24iOi00Ni42MywibGF0IjotMjMuNTV9LCJ3ZWF0aGVyIjpbeyJpZCI6ODAwLCJtYWluIjoiQ2xlYXIiLCJkZXNjcmlwdGlvbiI6ImNsZWFyIHNreSIsImljb24iOiIwMWQifV0sImJhc2UiOiJzdGF0aW9ucyIsIm1haW4iOnsidGVtcCI6NzQuNywicHJlc3N1cmUiOjEwMTcsImh1bWlkaXR5Ijo2MCwidGVtcF9taW4iOjczLCJ0ZW1wX21heCI6NzUuOTl9LCJ2aXNpYmlsaXR5IjoxMDAwMCwid2luZCI6eyJzcGVlZCI6MTQuOTksImRlZyI6MzMwfSwiY2xvdWRzIjp7ImFsbCI6MH0sImR0IjoxNTU5MzA4MjQ0LCJzeXMiOnsidHlwZSI6MSwiaWQiOjg0NDYsIm1lc3NhZ2UiOjAuMDA1NywiY291bnRyeSI6IkJSIiwic3VucmlzZSI6MTU1OTI5NTY0NCwic3Vuc2V0IjoxNTU5MzM0NDc3fSwidGltZXpvbmUiOi0xMDgwMCwiaWQiOjM0NDg0MzksIm5hbWUiOiJTw6NvIFBhdWxvIiwiY29kIjoyMDB9
+    http_version: 
+  recorded_at: Fri, 31 May 2019 13:13:10 GMT
+recorded_with: VCR 5.0.0

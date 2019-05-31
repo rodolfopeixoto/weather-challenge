@@ -9,6 +9,7 @@ require 'webmock/rspec'
 require 'vcr'
 require 'shoulda-matchers'
 require 'database_cleaner'
+require 'capybara-webkit'
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |file| require file }
 
 ENV['RAILS_ENV'] ||= 'test'
@@ -26,7 +27,7 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
   config.order = 'random'
+  Capybara.javascript_driver = :webkit
+  Capybara.server = :webrick
 end
 
-Capybara.javascript_driver = :webkit
-Capybara.server = :webrick

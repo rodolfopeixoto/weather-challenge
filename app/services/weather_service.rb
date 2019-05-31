@@ -1,10 +1,8 @@
 class WeatherService
-  attr_reader :get_weather, :city, :units
 
   def initialize(city, units = 'imperial')
     @city = city
     @units = units
-    @get_weather = get_weather
   end
 
   def request_weather

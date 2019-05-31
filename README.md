@@ -15,7 +15,7 @@ A Análise de Negócios mapeou as seguintes histórias em ordem de prioridade:
 
 ## Detalhes técnicos
 
-Na história 1, faça uma classe para conversão de temperaturas. Ela recebe uma temperatura em Fahrenheit (F) e converte para Celsius (C). Use essa classe para exibir a temperatura na tela, ao lado da temperatura em Fahrenheit. 
+Na história 1, faça uma classe para conversão de temperaturas. Ela recebe uma temperatura em Fahrenheit (F) e converte para Celsius (C). Use essa classe para exibir a temperatura na tela, ao lado da temperatura em Fahrenheit.
 
 Na história 2, coloque um campo de texto para passar o nome da cidade, repasse para a API, e mostre a previsão da cidade selecionada. Bônus se fizer sem que seja necessário recarregar a página. Preveja que a API pode retornar erros que deverão ser tratados.
 
@@ -27,7 +27,7 @@ Na história 4, crie uma tabela 'users' e modele o banco a partir daí. Deverá 
 
 * Siga as histórias na ordem de prioridade. Procure focar em pequenos entregáveis. Tudo bem se não conseguir entregar tudo, mas faça o máximo que puder no tempo proposto.
 * Nós iremos avaliar a qualidade no código, as boas práticas e sua atenção com a qualidade na implementação. Tenha atenção aos detalhes e
-busque tratar condições anormais de execução. 
+busque tratar condições anormais de execução.
 * O README deverá ter instruções detalhadas de como rodar a aplicação. Caso precise gerar usuários de testes para a história 4, facilite a criação dos mesmos para quem for rodar sua aplicação.
 * Envie-nos um link para um repositório seu ou um arquivo ZIP com a sua solução. **Não abra PRs para este repositório.**
 * Faça testes unitários para models e serviços. Testes de integração também são bem vindos.
@@ -56,3 +56,24 @@ Acesse em http://localhost:3000
 ```
 
 Acesse em http://localhost:3000
+
+
+### Executar os testes
+
+#### Sem Docker
+
+```shell
+  bundle exec rspec spec
+```
+
+#### Com Docker
+
+Acesse o container
+```shell
+  docker-compose run --rm web bash
+```
+Execute os testes com o javascript ativado
+
+```shell
+  xvfb-run -a bundle exec rspec spec
+```

@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=3af12266e2913e9347cee2db36b37fe3&q=Sao%20Paulo,BR&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Fri, 31 May 2019 13:26:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '459'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?APPID=3af12266e2913e9347cee2db36b37fe3&q=sao+paulo%2cbr&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-46.64,"lat":-23.55},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"base":"stations","main":{"temp":74.82,"pressure":1017,"humidity":60,"temp_min":73,"temp_max":77},"visibility":10000,"wind":{"speed":14.99,"deg":330},"clouds":{"all":0},"dt":1559309166,"sys":{"type":1,"id":8446,"message":0.0056,"country":"BR","sunrise":1559295646,"sunset":1559334479},"timezone":-10800,"id":3448439,"name":"Sao
+        Paulo","cod":200}'
+    http_version: 
+  recorded_at: Fri, 31 May 2019 13:26:48 GMT
+recorded_with: VCR 5.0.0
