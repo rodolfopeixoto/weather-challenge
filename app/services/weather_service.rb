@@ -1,7 +1,7 @@
 class WeatherService
 
   def initialize(city, units = 'imperial')
-    @city = city
+    @city = city.blank? ? 'São Paulo' : city
     @units = units
   end
 

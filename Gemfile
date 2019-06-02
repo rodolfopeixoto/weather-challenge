@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'openweather2'
 gem 'rack-cors', require: 'rack/cors'
 gem 'rubocop', '~> 0.58.1', require: false
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'
