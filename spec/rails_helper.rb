@@ -12,6 +12,8 @@ require 'vcr'
 require 'shoulda-matchers'
 require 'database_cleaner'
 require 'capybara-webkit'
+require 'devise'
+
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |file| require file }
 
 ENV['RAILS_ENV'] ||= 'test'
