@@ -1,0 +1,7 @@
+---
+pt-BR:
+  errors:
+    api:
+      openweather2:
+        UnknownResponse: Cidade não encontrada.
+        UnprocessableError: Erro ao conectar a API.

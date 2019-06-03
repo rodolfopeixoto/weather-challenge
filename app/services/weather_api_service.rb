@@ -1,4 +1,4 @@
-class WeatherService
+class WeatherApiService
 
   def initialize(city, units = 'imperial')
     @city = city
@@ -17,9 +17,9 @@ class WeatherService
     begin
       connect_api
     rescue Openweather2::UnknownResponse
-      @weather = { message: 'Cidade não encontrada.' }
+      @weather = { message: I18n.t('.errors.api.openweather2.UnknownResponse') }
     rescue Openweather2::UnprocessableError
-      @weather = { message: 'Erro ao conectar a API.' }
+      @weather = { message: I18n.t('.errors.api.openweather2.UnprocessableError') }
     end
   end
 end

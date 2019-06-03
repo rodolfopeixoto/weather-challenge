@@ -1,11 +1,7 @@
 class DashboardController < ApplicationController
   def index
-    weather_service = WeatherService.new(params[:city]).request_weather
-    if weather_service.is_a?(Hash)
-      @weather = weather_service
-    else
-      @weather = TemperaturePresenter.new(weather_service)
-    end
+    weather_service = WeatherApiService.new(params[:city]).request_weather
+    @weather = WeatherPresenter.new(weather_service)
     respond_to do |format|
       format.html
       format.js

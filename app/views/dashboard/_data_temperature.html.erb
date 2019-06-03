@@ -1,5 +1,3 @@
-<% unless weather.is_a?(Hash) %>
-
 <h1>Weather for <%= weather.city %></h1>
 
 <h2><%= weather.temperature %> &ordm;F
@@ -29,7 +27,3 @@
     </tr>
   </tbody>
 </table>
-
-<% else %>
-   <p><%= weather[:message] %></p>
-<% end %>
