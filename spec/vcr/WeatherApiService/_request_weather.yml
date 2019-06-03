@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 03 Jun 2019 02:40:36 GMT
+      - Mon, 03 Jun 2019 03:19:11 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -39,8 +39,8 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"coord":{"lon":-46.64,"lat":-23.55},"weather":[{"id":501,"main":"Rain","description":"moderate
-        rain","icon":"10n"}],"base":"stations","main":{"temp":61.79,"pressure":1020,"humidity":88,"temp_min":60.8,"temp_max":62.6},"visibility":9000,"wind":{"speed":4.7,"deg":100},"rain":{"3h":3.5},"clouds":{"all":39},"dt":1559529392,"sys":{"type":1,"id":8394,"message":0.0048,"country":"BR","sunrise":1559468497,"sunset":1559507264},"timezone":-10800,"id":3448439,"name":"Sao
+        rain","icon":"10n"}],"base":"stations","main":{"temp":61.79,"pressure":1020,"humidity":88,"temp_min":60.8,"temp_max":62.6},"visibility":9000,"wind":{"speed":4.7,"deg":100},"rain":{"3h":3.5},"clouds":{"all":39},"dt":1559531807,"sys":{"type":1,"id":8394,"message":0.0058,"country":"BR","sunrise":1559554922,"sunset":1559593658},"timezone":-10800,"id":3448439,"name":"Sao
         Paulo","cod":200}'
     http_version: 
-  recorded_at: Mon, 03 Jun 2019 02:40:36 GMT
+  recorded_at: Mon, 03 Jun 2019 03:19:11 GMT
 recorded_with: VCR 5.0.0
