@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class WeatherPresenter < SimpleDelegator
   attr_reader :weather
 

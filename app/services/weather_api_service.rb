@@ -1,5 +1,6 @@
-class WeatherApiService
+# frozen_string_literal: true
 
+class WeatherApiService
   def initialize(city, units = 'imperial')
     @city = city
     @units = units
@@ -14,12 +15,10 @@ class WeatherApiService
   end
 
   def check_error_api
-    begin
-      connect_api
-    rescue Openweather2::UnknownResponse
-      @weather = { message: I18n.t('.errors.api.openweather2.UnknownResponse') }
-    rescue Openweather2::UnprocessableError
-      @weather = { message: I18n.t('.errors.api.openweather2.UnprocessableError') }
-    end
+    connect_api
+  rescue Openweather2::UnknownResponse
+    @weather = { message: I18n.t('.errors.api.openweather2.UnknownResponse') }
+  rescue Openweather2::UnprocessableError
+    @weather = { message: I18n.t('.errors.api.openweather2.UnprocessableError') }
   end
 end

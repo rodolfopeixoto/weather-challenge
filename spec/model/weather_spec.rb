@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Weather do
-
   let(:weather) { Weather.new }
 
   it '.to_celsius' do

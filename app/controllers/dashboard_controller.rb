@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DashboardController < ApplicationController
   def index
     weather_service = WeatherApiService.new(params[:city]).request_weather

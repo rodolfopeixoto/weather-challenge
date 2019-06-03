@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe WeatherPresenter do
-
   let(:weather) { double('WeatherService') }
   let(:weather_error) { { message: '' } }
   let(:weather_presenter) { WeatherPresenter.new(weather) }
@@ -11,7 +12,6 @@ RSpec.describe WeatherPresenter do
   end
 
   context 'celsius' do
-
     it '.celsius_temperature' do
       expect(weather_presenter.celsius_temperature).to eq '25.0'
     end

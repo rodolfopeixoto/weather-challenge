@@ -1,4 +1,4 @@
-module Api::V1
-  class ApiController < ActionController::Base
-  end
+# frozen_string_literal: true
+
+class Api::V1::ApiController < ActionController::Base
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Api::V1::ForecastsController < ApplicationController
   def show
     weather_service = WeatherApiService.new(params[:city]).request_weather
