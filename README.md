@@ -77,3 +77,5 @@ Execute os testes com o javascript ativado
 ```shell
   xvfb-run -a bundle exec rspec spec
 ```
+
+API disponível em: http://localhost:3000/api/v1/forecast?city=[cidade-desejada]
