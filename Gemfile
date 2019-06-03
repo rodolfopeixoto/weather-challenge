@@ -14,9 +14,10 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'rails', '~> 5.2.3'
 gem 'rubocop', '~> 0.58.1', require: false
 gem 'sass-rails', '~> 5.0'
-gem 'therubyracer'
+gem 'mini_racer', platforms: :ruby
 gem 'uglifier', '>= 1.3.0'
 gem 'devise'
+gem 'bootstrap', '~> 4.3.1'
 
 group :development, :test do
   gem 'brakeman', require: false
