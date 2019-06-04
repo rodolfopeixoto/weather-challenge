@@ -1,3 +1,17 @@
 <%= render 'header' %>
-<%= render 'search_city' %>
-<div id="temperature"></div>
+<div class="container">
+  <div id="weather-content" class="row">
+    <%= render 'search_city' %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+            <div id="temperature"></div>
+        </div>
+        <div class="col-sm">
+          TABELA COM AS CIDADES FAVORITAS
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

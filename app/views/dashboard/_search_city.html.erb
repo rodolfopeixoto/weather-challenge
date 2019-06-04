@@ -1,6 +1,6 @@
 <%= form_tag dashboard_index_path, method: :get, id: 'cities_search', remote: true do %>
   <p>
     <%= text_field_tag :city, params[:city] %>
-    <%= submit_tag 'Buscar' %>
+    <%= submit_tag 'Buscar', class: 'btn btn-primary secundary_color' %>
   </p>
 <% end %>
