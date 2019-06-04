@@ -2,13 +2,15 @@
 @import "devise";
 @import "form";
 
+:root {
+  --primary-bg-color: #4DBEFF;
+  --secundary-bg-color: #00A2FF;
+}
+
  html,body {
   height:100%;
   width:100%;
   margin:0;
-}
-body {
-  display:flex;
 }
 
 h1, h2, h3, h4, h5, h6, p, label, a{
@@ -21,4 +23,8 @@ h1, h2, h3, h4, h5, h6, p, label, a{
 
 .secundary_color {
   background-color: #00A2FF;
+}
+
+header{
+  background-color: var(--primary-bg-color);
 }
