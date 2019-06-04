@@ -1,12 +1,20 @@
 #weather-content{
-  margin-top: 16em;
+  margin-top: 6em;
 }
 
 #city{
   width: 26em;
-  height: 2.2em;
+  height: 2.3em;
 }
 
 .card .col-sm:first-child {
   font-weight: bold;
+}
+
+table.table.table-striped.card {
+  display: inline-table;
+}
+
+.text-muted {
+  color: #00A2FF !important;
 }
