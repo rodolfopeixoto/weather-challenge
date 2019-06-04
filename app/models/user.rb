@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :first_name, :last_name, :email, presence: true
-  validates :email, presence: true, uniqueness: true
+  validates :email, presence: true
 
   has_many :favorite_cities, dependent: :destroy
 end

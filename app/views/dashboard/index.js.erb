@@ -1,1 +1,3 @@
 $('#temperature').html("<%= escape_javascript(render partial: @weather.webservice_status, locals: {weather: @weather}) %>");
+$("#modal-form").find(".modal-body").html("<%= j render 'shared/modal' %>");
+$("#modal-form").modal('show');

@@ -18,7 +18,6 @@ gem 'mini_racer', platforms: :ruby
 gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'bootstrap', '~> 4.3.1'
-gem 'jquery-ui-rails'
 
 group :development, :test do
   gem 'brakeman', require: false

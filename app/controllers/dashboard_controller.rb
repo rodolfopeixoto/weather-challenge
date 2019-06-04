@@ -6,6 +6,7 @@ class DashboardController < ApplicationController
 
   def index
     weather_service = WeatherApiService.new(params[:city]).request_weather
+    @favorite_cities = FavoriteCity.all
     @weather = WeatherPresenter.new(weather_service)
     respond_to do |format|
       format.html

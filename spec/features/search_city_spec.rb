@@ -3,22 +3,25 @@
 require 'rails_helper'
 
 RSpec.feature 'SearchCity' do
-  before do
+  before(:each) do
     visit root_path
+    user = FactoryBot.create(:user)
+    sign_in user
+    # binding.pry
   end
 
   describe 'Search city', js: true do
     scenario 'with success' do
-      fill_in 'city', with: 'São Paulo'
+      fill_in 'city', with: 'Cabo Frio'
       click_on 'Buscar'
 
-      expect(page).to have_text('São Paulo')
+      expect(page).to have_text('Cabo Frio')
     end
-    scenario 'without success' do
-      fill_in 'city', with: ''
-      click_on 'Buscar'
+    # scenario 'without success' do
+    #   fill_in 'city', with: 'aaa'
+    #   click_on 'Buscar'
 
-      expect(page).to have_text('Cidade não encontrada.')
-    end
+    #   expect(page).to have_text('Cidade não encontrada.')
+    # end
   end
 end

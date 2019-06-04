@@ -6,6 +6,6 @@ RSpec.describe FavoriteCity, type: :model do
     it { should validate_uniqueness_of(:name) }
   end
   context 'associations' do
-    it { should belong_to(:users) }
+    it { should belong_to(:user) }
   end
 end
