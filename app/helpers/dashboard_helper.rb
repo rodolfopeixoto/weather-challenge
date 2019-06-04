@@ -14,7 +14,7 @@ module DashboardHelper
       link_to 'Edit Profile', edit_user_registration_path
     end)
     concat(content_tag(:li) do
-      link_to '( + ) Cidades Favoritas', "#", remote: true, data: {toggle: "modal", target: "#modal-form"}
+      link_to '( + ) Cidades Favoritas', new_favorite_city_path, remote: true, data: {toggle: "modal", target: "#modal-form"}
     end)
     concat(content_tag(:li) do
       link_to 'Logout', destroy_user_session_path, method: :delete

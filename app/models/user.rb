@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, :email, presence: true
   validates :email, presence: true, uniqueness: true
+
+  has_many :favorite_cities, dependent: :destroy
 end
