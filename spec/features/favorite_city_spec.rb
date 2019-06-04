@@ -8,7 +8,12 @@ RSpec.feature 'Favorite City' do
   end
 
   describe "when success" do
-    it 'register a new favotire city' do
+    it 'register a new favotire city', js: true do
+      click_link '( + ) Cidades Favoritas'
+      fill_in 'Nome', with: 'Cabo Frio'
+      click_button 'Cadastrar'
+
+      expect(page).to have_content 'Cidade cadastrada com sucesso.'
     end
   end
 

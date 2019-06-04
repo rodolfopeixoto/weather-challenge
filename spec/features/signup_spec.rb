@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'Signup' do
+RSpec.feature 'Signup', type: :feature do
   let!(:user) { FactoryBot.create(:user) }
   let(:valid_attributes) { FactoryBot.attributes_for(:user) }
 
@@ -9,8 +9,8 @@ RSpec.feature 'Signup' do
     click_link "Sign up"
   end
 
-  describe "when success", type: :feature, js: true do
-    it "registers a new user" do
+  context "register a new user" do
+    it "when success" do
 
       fill_in "Nome", with: valid_attributes[:first_name]
       fill_in "Sobrenome", with: valid_attributes[:last_name]
@@ -22,10 +22,8 @@ RSpec.feature 'Signup' do
       expect(page).to have_current_path "/"
       expect(page).to have_content "Login efetuado com sucesso."
     end
-  end
-  describe "when unsuccess", type: :feature, js: true do
 
-    it "registers a new user" do
+    it "when unsuccess", js: true do
 
       fill_in "Nome", with: ''
       fill_in "Sobrenome", with: ''
@@ -34,7 +32,9 @@ RSpec.feature 'Signup' do
       fill_in "Confirmação da Senha", with: ''
       click_button "Sign up"
 
-      expect(page).to have_content "Preecha este campo."
+      expect(page).to have_content "Senha não pode ficar em branco"
+      expect(page).to have_content "Nome não pode ficar em branco"
+      expect(page).to have_content "Sobrenome não pode ficar em branco"
     end
   end
 end

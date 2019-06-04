@@ -3,3 +3,5 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require devise
+//= require dashboard
+//= require_tree .
