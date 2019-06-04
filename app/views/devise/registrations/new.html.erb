@@ -7,18 +7,18 @@
 
     <div class="form-group">
       <%= f.label :first_name %><br />
-      <%= f.text_field :first_name, autofocus: true  %>
+      <%= f.text_field :first_name, autofocus: true, required: true  %>
     </div>
 
 
     <div class="form-group">
       <%= f.label :last_name %><br />
-      <%= f.text_field :last_name %>
+      <%= f.text_field :last_name, required: true %>
     </div>
 
     <div class="form-group">
       <%= f.label :email %><br />
-      <%= f.email_field :email %>
+      <%= f.email_field :email, required: true %>
     </div>
 
     <div class="form-group">
@@ -26,12 +26,12 @@
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password %>
+      <%= f.password_field :password, required: true %>
     </div>
 
     <div class="form-group">
       <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation %>
+      <%= f.password_field :password_confirmation, required: true %>
     </div>
 
 
