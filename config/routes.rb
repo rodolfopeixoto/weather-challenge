@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   get 'dashboard/index'
 
-  resources :favorite_cities, only: %i[new create destroy]
+  resources :favorite_cities, except: %i[edit update]
 
   root 'dashboard#index'
 

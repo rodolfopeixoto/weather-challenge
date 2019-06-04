@@ -1,12 +1,11 @@
 class FavoriteCityController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @favorite_city = FavoriteCity.all
   end
 
   def show
-  end
-
-  def new
   end
 
   def new

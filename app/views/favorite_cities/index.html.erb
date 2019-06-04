@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h2>Favorite Cities</h2>
+  <div class="well">
+    <%= link_to "New Customer", new_favorite_path, remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="new-customer"></div>
+
+  <table id class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody id="favorite_cities">
+    <%= render @favorite_cities %>
+    </tbody>
+  </table>
+
+  <%= render 'dialog' %>
+
+</div>
