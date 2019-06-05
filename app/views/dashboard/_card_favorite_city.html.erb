@@ -1,9 +1,85 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 28rem;">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title"><%= weather.city  %></h5>
+    <p class="card-text">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          Pressure:
+        </div>
+        <div class="col-sm">
+          <%= weather.pressure %>hpa
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          Humidity:
+        </div>
+        <div class="col-sm">
+          <%= weather.humidity %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          Min Temperature Fahrenheit:
+        </div>
+        <div class="col-sm">
+          <%= weather.min_temperature %> &ordm;F
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          Min Temperature Celsius:
+        </div>
+        <div class="col-sm">
+          <%= weather.celsius_min_temperature %> &ordm;C
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          Max Temperature Fahrenheit:
+        </div>
+        <div class="col-sm">
+          <%= weather.max_temperature %> &ordm;F
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          Max Temperature Celsius:
+        </div>
+        <div class="col-sm">
+         <%= weather.celsius_max_temperature %>&ordm;C
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          Wind Speed:
+        </div>
+        <div class="col-sm">
+         <%= weather.wind_speed %>mi/h
+        </div>
+      </div>
+    </div>
+
+    </p>
   </div>
 </div>

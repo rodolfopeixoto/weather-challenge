@@ -11,9 +11,11 @@
 
   <div class="container favorite">
     <div class="row">
-      <div class="col">
-        <%= render 'card_favorite_city' %>
-      </div>
+      <%= @weather_favorite_cities.each do |weather_favorite_city| %>
+        <div class="col">
+          <%= render partial: 'card_favorite_city', locals: { weather: weather_favorite_city } %>
+        </div>
+      <% end %>
     </div>
   </div>
 
