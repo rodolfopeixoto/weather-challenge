@@ -1,8 +1,9 @@
-class FavoriteCityController < ApplicationController
+class FavoriteCitiesController < ApplicationController
   before_action :authenticate_user!
 
+
   def index
-    @favorite_city = FavoriteCity.all
+    @favorite_cities = FavoriteCity.all
   end
 
   def show
@@ -10,12 +11,22 @@ class FavoriteCityController < ApplicationController
 
   def new
     @favorite_city = FavoriteCity.new
-    respond_to do |format|
-      format.js
-    end
   end
 
   def create
+    @favorite_city = FavoriteCity.new(favorite_city_params)
+    @favorite_city.user_id = current_user
+
+    respond_to do |format|
+      if @favorite_city.save
+        format.json { head :no_content }
+        format.js
+      else
+        format.json { render json: @favorite_city.errors.full_messages,
+                            status: :unprocessable_entity }
+      end
+
+    end
   end
 
   def destroy

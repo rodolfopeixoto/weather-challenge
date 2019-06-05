@@ -11,10 +11,13 @@ module DashboardHelper
 
   def list_link
     concat(content_tag(:li) do
+      link_to 'Weather', dashboard_index_path
+    end)
+    concat(content_tag(:li) do
       link_to 'Edit Profile', edit_user_registration_path
     end)
     concat(content_tag(:li) do
-      link_to '( + ) Cidades Favoritas', new_favorite_city_path
+      link_to 'Cidades Favoritas', favorite_cities_path
     end)
     concat(content_tag(:li) do
       link_to 'Logout', destroy_user_session_path, method: :delete

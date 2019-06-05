@@ -1,11 +1,6 @@
-<div class="container">
+  <%= render 'dialog' %>
 
   <h2>Favorite Cities</h2>
-  <div class="well">
-    <%= link_to "New Customer", new_favorite_path, remote: true, class: "btn btn-primary" %>
-  </div>
-  <div class="new-customer"></div>
-
   <table id class="table table-bordered table-striped">
     <thead>
     <tr>
@@ -18,6 +13,9 @@
     </tbody>
   </table>
 
-  <%= render 'dialog' %>
+  <div class="well">
+    <%= link_to "Nova Cidade", new_favorite_city_path, remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="new-favorite-city"></div>
 
-</div>
+

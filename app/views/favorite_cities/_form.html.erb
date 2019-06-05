@@ -1,0 +1,17 @@
+<%= form_for(@favorite_city, remote: true, :html => { :role => "form" }) do |f| %>
+<div id="error_explanation" class="bg-danger text-danger">
+</div>
+
+<div class="row">
+ <div class="col-sm-6">
+  <div class="form-group">
+    <%= f.label :name, :class => "control-label" %>
+    <%= f.text_field :name, :class => "form-control", autocomplete: 'off'  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Create Create", :class => "btn btn-primary" %>
+  </div>
+</div>
+</div>
+<% end %>
