@@ -15,3 +15,20 @@
 </div>
 </div>
 <% end %>
+
+
+<script>
+  input = document.getElementById('favorite_city_name');
+  options = {
+    types: ['(cities)']
+  }
+  new google.maps.places.Autocomplete(input, options);
+
+
+</script>
+
+<style>
+    .pac-container {
+        z-index: 20000 !important;
+    }
+</style>
