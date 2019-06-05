@@ -9,12 +9,12 @@ RSpec.describe FavoriteCitiesQuery do
   let!(:city2) { FactoryBot.create(:favorite_city, user: user) }
   subject { FavoriteCitiesQuery.new(user) }
 
-  describe '.search_cities' do
+  describe '.search_names' do
     it 'return two records' do
-      expect(subject.search_cities.count).to eq 2
+      expect(subject.search_names.count).to eq 2
     end
     it 'return all cities in array' do
-      expect(subject.search_cities.map(&:name)).to eq [city1.name, city2.name]
+      expect(subject.search_names.map(&:name)).to eq [city1.name, city2.name]
     end
   end
 end

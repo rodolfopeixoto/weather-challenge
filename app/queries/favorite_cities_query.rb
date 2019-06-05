@@ -6,7 +6,7 @@ class FavoriteCitiesQuery
     @user_id = user_id
   end
 
-  def search_cities
-    relation.where(user_id: @user_id)
+  def search_names
+    relation.where(user_id: @user_id).map(&:name)
   end
 end

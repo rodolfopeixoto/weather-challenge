@@ -1,1 +1,1 @@
-$('#temperature').append("<%= escape_javascript(render partial: @weather.webservice_status, locals: {weather: @weather}) %>");
+$('#temperature').html("<%= escape_javascript(render partial: @weather.webservice_status, locals: {weather: @weather}) %>");
