@@ -21,6 +21,6 @@ class DashboardController < ApplicationController
   end
 
   def favorite_cities_scope
-    FavoriteCitiesQuery.new(current_user.id).first_city
+    @favorite_cities = FavoriteCitiesQuery.new(current_user.id)
   end
 end
