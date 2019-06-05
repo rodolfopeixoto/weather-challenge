@@ -1,0 +1,6 @@
+<tr id="favorite_city_<%= favorite_city.id %>">
+  <td><%= favorite_city.name %></td>
+  <td>
+    <%= link_to 'Delete', favorite_city, remote: true, :method => :delete, data: {confirm: "Delete favorite_city: #{favorite_city.name} "}, :class => 'btn btn-sm btn-danger' %>
+  </td>
+</tr>

@@ -1,6 +1,9 @@
 class FavoriteCitiesController < ApplicationController
   before_action :authenticate_user!
 
+  before_action :set_favorite_city, only: [:show, :destroy]
+
+  skip_before_action :verify_authenticity_token
 
   def index
     @favorite_cities = FavoriteCity.all
@@ -15,7 +18,7 @@ class FavoriteCitiesController < ApplicationController
 
   def create
     @favorite_city = FavoriteCity.new(favorite_city_params)
-    @favorite_city.user_id = current_user
+    @favorite_city.user = current_user
 
     respond_to do |format|
       if @favorite_city.save
@@ -44,6 +47,6 @@ class FavoriteCitiesController < ApplicationController
   end
 
   def favorite_city_params
-    params.require(:favorite_city).permit(:name)
+    params.require(:favorite_city).permit(:name, :user_id)
   end
 end
