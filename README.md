@@ -53,6 +53,11 @@ API disponível em: http://localhost:3000/api/v1/forecast?city=[cidade-desejada]
 
 [https://weather-bioritmo.herokuapp.com/](https://weather-bioritmo.herokuapp.com/)
 
+### Obersvações
+O projeto hoje teria condições como um MVP de ser utilizado, porém para uma versão 2.0, seria interessante que só fosse aceito dados do Google Place API para termos dados válidos. 
+* Adicionaria também todas as cidades no sistema para que não tenhamos request na API do Google.
+* Adicionaria um cache de no máximo 5 minutos em buscas para diminuir o tempo de request.
+
 ## O Desafio
 
 Você recebeu a tarefa de desenvolver algumas features para um site de previsão do tempo.
