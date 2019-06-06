@@ -9,8 +9,8 @@ class WeatherPresenter < SimpleDelegator
     __setobj__(weather)
   end
 
-  def webservice_status
-    @weather.is_a?(Hash) ? 'message_errors' : 'data_temperature'
+  def webservice_status(partial_success)
+    @weather.is_a?(Hash) ? 'message_errors' : partial_success
   end
 
   def celsius_temperature
