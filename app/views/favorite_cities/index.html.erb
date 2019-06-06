@@ -1,11 +1,11 @@
   <%= render 'dialog' %>
 
-  <h2>Favorite Cities</h2>
+  <h2><%= I18n.t('.activerecord.models.favorite_city.other') %></h2>
   <table id class="table table-bordered table-striped">
     <thead>
     <tr>
-      <th>Name</th>
-      <th>Actions</th>
+      <th scope="col"><%= I18n.t('.activerecord.attributes.favorite_city.name') %></th>
+      <th scope="col"><%= I18n.t('.buttons.action') %></th>
     </tr>
     </thead>
     <tbody id="favorite_cities">
@@ -14,7 +14,7 @@
   </table>
 
   <div class="well">
-    <%= link_to "Nova Cidade", new_favorite_city_path, remote: true, class: "btn btn-primary" %>
+    <%= link_to "#{I18n.t('.buttons.submit')} #{I18n.t('.favorite_cities.city')}", new_favorite_city_path, remote: true, class: "btn btn-primary" %>
   </div>
   <div class="new-favorite-city"></div>
 
