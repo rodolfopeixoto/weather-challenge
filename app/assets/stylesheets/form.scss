@@ -1,3 +1,13 @@
 form {
   margin:auto;
 }
+
+input#favorite_city_name {
+  width: 29em;
+  height: 3em;
+}
+
+#new_favorite_city input.btn.btn-primary {
+  width: 29em;
+  height: 3em;
+}
