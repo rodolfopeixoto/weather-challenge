@@ -7,7 +7,7 @@ class DashboardController < ApplicationController
   respond_to :html, :js
 
   def index
-    search_weather
+    @weather = search_weather
   end
 
 
@@ -16,7 +16,7 @@ class DashboardController < ApplicationController
 
   def search_weather(city = params[:city])
     weather_service = WeatherApiService.new(city).request_weather
-    @weather = WeatherPresenter.new(weather_service)
+    WeatherPresenter.new(weather_service)
   end
 
   def favorite_cities_scope
