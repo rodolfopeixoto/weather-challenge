@@ -1,0 +1,9 @@
+'pt-BR':
+  activerecord:
+    models:
+      favorite_city:
+        one: Cidade Favorita
+        other: Cidades Favoritas
+    attributes:
+      favorite_city:
+        name: Nome

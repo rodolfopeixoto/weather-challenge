@@ -10,8 +10,9 @@ RSpec.feature 'Favorite City' do
   end
 
   describe "when success" do
-    it 'register a new favotire city' do
+    it 'register a new favotire city', js: true do
       click_link 'Cidades Favoritas'
+      click_link 'Cadastrar'
       fill_in 'Nome', with: 'Cabo Frio, RJ, Brasil'
       click_button 'Cadastrar'
 
