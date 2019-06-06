@@ -1,7 +1,7 @@
 <%= form_tag dashboard_index_path, method: :get, id: 'cities_search', remote: true do %>
   <p>
     <%= search_field_tag :city, params[:city], autocomplete: 'off' %>
-    <%= submit_tag 'Buscar', class: 'btn btn-primary secundary_color' %>
+    <%= submit_tag I18n.t('.form.button_search'), class: 'btn btn-primary secundary_color' %>
   </p>
 <% end %>
 
