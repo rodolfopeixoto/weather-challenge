@@ -33,12 +33,17 @@ end
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
 
-  config.use_transactional_fixtures = false
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.use_transactional_fixtures = false
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
   config.order = 'random'
   config.include RequestHelpers
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Warden::Test::Helpers, type: :feature
+  config.after(type: :feature) { Warden.test_reset! }
+
+
 
   # config.include Devise::Test::ControllerHelpers, type: :controller
 
