@@ -6,7 +6,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">
-          Pressure:
+          <%= I18n.t('.weather.pressure') %>:
         </div>
         <div class="col-sm">
           <%= weather.pressure %>hpa
@@ -17,7 +17,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">
-          Humidity:
+          <%= I18n.t('.weather.humidity') %>:
         </div>
         <div class="col-sm">
           <%= weather.humidity %>
@@ -28,7 +28,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">
-          Min Temperature Fahrenheit:
+          <%= I18n.t('.weather.min_temperature') %> Fahrenheit:
         </div>
         <div class="col-sm">
           <%= weather.min_temperature %> &ordm;F
@@ -39,7 +39,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">
-          Min Temperature Celsius:
+          <%= I18n.t('.weather.min_temperature') %> Celsius:
         </div>
         <div class="col-sm">
           <%= weather.celsius_min_temperature %> &ordm;C
@@ -50,7 +50,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">
-          Max Temperature Fahrenheit:
+          <%= I18n.t('.weather.max_temperature') %> Fahrenheit:
         </div>
         <div class="col-sm">
           <%= weather.max_temperature %> &ordm;F
@@ -61,7 +61,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">
-          Max Temperature Celsius:
+          <%= I18n.t('.weather.max_temperature') %> Celsius:
         </div>
         <div class="col-sm">
          <%= weather.celsius_max_temperature %>&ordm;C
@@ -72,7 +72,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">
-          Wind Speed:
+          <%= I18n.t('.weather.wind_speed') %>:
         </div>
         <div class="col-sm">
          <%= weather.wind_speed %>mi/h

@@ -1,0 +1,8 @@
+'pt-BR':
+  weather:
+    pressure: Pressão
+    humidity: Umidade
+    min_temperature: Temperatura mínima
+    max_temperature: Temperatura máxima
+    wind_speed: Velocidade do vento
+    you_are_in: Você está em
