@@ -1,21 +1,22 @@
 # frozen_string_literal: true
 
-ENV['RAILS_ENV'] ||= 'test'
+ENV['RAILS_ENV'] = 'test'
 
 require 'spec_helper'
 require File.expand_path('../config/environment', __dir__)
 require 'rails/all'
 require 'rspec/rails'
 require 'capybara/rspec'
+require 'capybara-webkit'
+require "rack_session_access/capybara"
 require 'simplecov'
-require 'capybara/rspec'
 require 'webmock/rspec'
 require 'vcr'
 require 'shoulda-matchers'
 require 'database_cleaner'
-require 'capybara-webkit'
-require 'devise'
 require 'simplecov'
+require 'support/factory_bot'
+
 
 SimpleCov.start
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |file| require file }
@@ -37,9 +38,9 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
   config.order = 'random'
+  config.include RequestHelpers
 
-  config.include Devise::Test::ControllerHelpers, type: :controller
-  config.include Authentication
+  # config.include Devise::Test::ControllerHelpers, type: :controller
 
   Capybara.javascript_driver = :webkit
   Capybara.server = :webrick
