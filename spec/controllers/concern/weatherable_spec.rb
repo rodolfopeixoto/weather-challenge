@@ -11,5 +11,4 @@ RSpec.describe FakesController, :vcr do
       expect(subject.search_weather('São Paulo, BR').city).to eq 'São Paulo'
     end
   end
-
 end

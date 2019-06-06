@@ -38,9 +38,12 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
   config.order = 'random'
-  config.include RequestHelpers
+
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Warden::Test::Helpers, type: :feature
+  config.include ControllerHelpers, :type => :controller
+
+  config.include RequestSpecHelper, type: :request
   config.after(type: :feature) { Warden.test_reset! }
 
 
