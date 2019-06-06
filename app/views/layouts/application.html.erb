@@ -12,7 +12,7 @@
 
   <body>
     <%= render 'shared/message' %>
-    <%= render '/shared/header' if current_user %>
+    <%= header_application %>
     <div class="container content">
       <%= yield %>
     </div>
