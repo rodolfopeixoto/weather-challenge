@@ -6,7 +6,7 @@ RSpec.feature 'SearchCity' do
   before(:each) do
     visit root_path
     user = FactoryBot.create(:user)
-    sign_in user
+    logged_as(user)
   end
 
   describe 'Search city', js: true do

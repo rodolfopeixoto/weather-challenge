@@ -15,7 +15,9 @@ require 'shoulda-matchers'
 require 'database_cleaner'
 require 'capybara-webkit'
 require 'devise'
+require 'simplecov'
 
+SimpleCov.start
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |file| require file }
 
 require File.expand_path('../config/environment', __dir__)
@@ -37,6 +39,7 @@ RSpec.configure do |config|
   config.order = 'random'
 
   config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Authentication
 
   Capybara.javascript_driver = :webkit
   Capybara.server = :webrick

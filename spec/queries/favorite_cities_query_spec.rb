@@ -14,7 +14,7 @@ RSpec.describe FavoriteCitiesQuery do
       expect(subject.search_names.count).to eq 2
     end
     it 'return all cities in array' do
-      expect(subject.search_names.map(&:name)).to eq [city1.name, city2.name]
+      expect(subject.search_names).to eq [city1.name, city2.name]
     end
   end
 end
