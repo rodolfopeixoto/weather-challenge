@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=3af12266e2913e9347cee2db36b37fe3&q=aaaa&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 06 Jun 2019 07:37:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '40'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?APPID=3af12266e2913e9347cee2db36b37fe3&q=aaaa&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"cod":"404","message":"city not found"}'
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 07:37:37 GMT
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=3af12266e2913e9347cee2db36b37fe3&q=&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 06 Jun 2019 07:37:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '44'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?APPID=3af12266e2913e9347cee2db36b37fe3&q=&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"cod":"400","message":"Nothing to geocode"}'
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 07:37:38 GMT
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=3af12266e2913e9347cee2db36b37fe3&q=S%C3%A3o%20Paulo&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 06 Jun 2019 07:37:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '469'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?APPID=3af12266e2913e9347cee2db36b37fe3&q=s%c3%a3o+paulo&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb29yZCI6eyJsb24iOi00Ni42MywibGF0IjotMjMuNTV9LCJ3ZWF0aGVyIjpbeyJpZCI6ODAzLCJtYWluIjoiQ2xvdWRzIiwiZGVzY3JpcHRpb24iOiJicm9rZW4gY2xvdWRzIiwiaWNvbiI6IjA0biJ9XSwiYmFzZSI6InN0YXRpb25zIiwibWFpbiI6eyJ0ZW1wIjo1Ny40MywicHJlc3N1cmUiOjEwMjYsImh1bWlkaXR5Ijo4MiwidGVtcF9taW4iOjU3LjIsInRlbXBfbWF4Ijo1Ny45OX0sInZpc2liaWxpdHkiOjEwMDAwLCJ3aW5kIjp7InNwZWVkIjozLjM2LCJkZWciOjkwfSwiY2xvdWRzIjp7ImFsbCI6NzV9LCJkdCI6MTU1OTgwNTg4Mywic3lzIjp7InR5cGUiOjEsImlkIjo4NDQ2LCJtZXNzYWdlIjowLjAwNDYsImNvdW50cnkiOiJCUiIsInN1bnJpc2UiOjE1NTk4MTQxOTIsInN1bnNldCI6MTU1OTg1Mjg0NH0sInRpbWV6b25lIjotMTA4MDAsImlkIjozNDQ4NDM5LCJuYW1lIjoiU8OjbyBQYXVsbyIsImNvZCI6MjAwfQ==
+    http_version: 
+  recorded_at: Thu, 06 Jun 2019 07:37:38 GMT
+recorded_with: VCR 5.0.0
