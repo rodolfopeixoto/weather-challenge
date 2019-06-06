@@ -11,3 +11,12 @@
         email: E-mail
         password: Senha
         password_confirmation: Confirmação da Senha
+        confirmation_sent_at: Confirmação enviada em
+        confirmation_token: Confirmação do token
+        confirmed_at: Confirmado em
+        created_at: Criado em
+        current_password: Senha atual
+        encrypted_password: Senha Encryptada
+        locked_at: Bloqueado em
+        remember_me: Lembre-me
+        updated_at: Atualizou em
