@@ -1,0 +1,6 @@
+'pt-BR':
+  menu:
+    weather: Previsão do Tempo
+    favorite_cities: Cidades Favoritas
+    profile: Perfil do Usuário
+    logout: Sair
