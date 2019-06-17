@@ -14,4 +14,4 @@ development:
   database: WEATHER_development
 production:
   <<: *default
-  database: SGT_development
+  database: WEATHER_production
