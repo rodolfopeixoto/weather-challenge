@@ -9,7 +9,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'openweather2'
 gem 'pg', '~> 0.18.4'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 gem 'rack-cors', require: 'rack/cors'
 gem 'rails', '~> 5.2.3'
 gem 'rubocop', '~> 0.58.1', require: false
